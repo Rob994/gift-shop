@@ -1,18 +1,16 @@
 {
-  "name": "node-shop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "sequelize-assoc",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/www"
   },
-  "keywords": [
-    "nodejs"
-  ],
-  "author": "Robert Gevorgyan <robgevorgyan44@gmail.com>",
-  "license": "ISC",
   "dependencies": {
-    "pg": "^8.5.1",
-    "read-excel-file": "^5.0.0"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
