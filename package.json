@@ -6,15 +6,19 @@
     "sequelize:init": "npm run sequelize:init:migrations && npm run sequelize:init:models",
     "sequelize:init:migrations": "node_modules/.bin/sequelize init:migrations",
     "sequelize:init:models": "node_modules/.bin/sequelize init:models",
+
     "db:init": "npm run db:drop && npm run db:create",
     "db:drop": "node_modules/.bin/sequelize db:drop",
     "db:create": "node_modules/.bin/sequelize db:create",
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
+
     "models:init": "npm run models:create:user && npm run models:create:gift && npm run models:create:order",
     "models:create:user": "node_modules/.bin/sequelize model:create --name user --attributes name:string,number:bigint",
     "models:create:gift": "node_modules/.bin/sequelize model:create --name gift --attributes name:string,fromId:integer",
     "models:create:order": "node_modules/.bin/sequelize model:create --name order --attributes description:string,date:string,userId:integer,giftId:integer",
-    "start": "npm run db:drop && npm run db:create && npm run db:migrate && node index.js",
+
+    "start": "npm run db:init && npm run db:migrate && node index.js",
+
     "init:project": "npm run clear:project && npm run sequelize:init && npm run models:init",
     "clear:project": "shx rm -rf migrations models && shx echo Project Cleared"
   },
